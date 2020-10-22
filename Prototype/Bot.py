@@ -7,6 +7,7 @@ client = commands.Bot(command_prefix = '!',intents = intents)
 
 @client.event
 async def on_ready(): # BOT IS ONLINE
+    await client.change_presence(status=discord.Status.online, activity=discord.Game('Bamboozled'))
     print("Bot is ready")
 
 @client.event
@@ -44,7 +45,7 @@ async def ban(ctx, member: discord.Member, *, reason=None):  # BAN A MEMBER FROM
     await ctx.command(f'Banned {member.mention}')
 
 @client.command()
-async def unban(ctx, *, member):
+async def unban(ctx, *, member):  # UNBAN THE BANNED MEMBER
     banned_users = await ctx.guild.bans()
     member_name, member_discriminator = member.split('#')
 
@@ -56,5 +57,6 @@ async def unban(ctx, *, member):
             await ctx.send(f'Unbanned {user.mention}')
             return
 
-client.run('')
 
+
+client.run('')
