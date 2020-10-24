@@ -5,10 +5,7 @@ from discord.ext import commands
 intents = discord.Intents(messages = True, guilds = True, reactions = True, members = True, presences = True)
 client = commands.Bot(command_prefix = '!')
 
-@client.event
-async def on_ready(): # BOT IS ONLINE
-    await client.change_presence(status=discord.Status.online, activity=discord.Game('Bamboozled'))
-    print("Bot is ready")
+
 
 @client.command()
 async def load(ctx, extension):
