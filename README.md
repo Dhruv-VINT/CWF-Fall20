@@ -1,2 +1,2 @@
 # CWF-Fall'20
-Discord Bot
+Discord Bot (Joeyy)
