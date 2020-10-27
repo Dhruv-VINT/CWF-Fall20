@@ -13,15 +13,12 @@ async def on_ready():
     print("Bot is ready")
 
 
-extensions = ['Cogs.Member', 'Cogs.Sarcasm']
+extensions = ['Cogs.Member', 'Cogs.Sarcasm','Cogs.Clear_Message']
 
 if __name__ == '__main__':
     for ext in extensions:
         client.load_extension(ext)
 
-@client.command()
-async def clear(ctx, amount=5):   # CLEAR RECENT MESSAGES ON THE CHANNEL
-    await ctx.channel.purge(limit = amount)
 
 @client.command()
 async def kick(ctx, member: discord.Member, *, reason=None):  # KICK A MEMBER
@@ -47,4 +44,4 @@ async def unban(ctx, *, member):  # UNBAN THE BANNED MEMBER
 
 
 
-client.run('NzY2MDM4MzQ3MDQ2MDYwMDYy.X4dizg.4jCGM_83kqBRNzGkMIniG3pK-hE')
+client.run('NzY2MDM4MzQ3MDQ2MDYwMDYy.X4dizg.u7fZn6sl1u0lDLWxKfWgaNia2nM')
