@@ -13,35 +13,11 @@ async def on_ready():
     print("Bot is ready")
 
 
-extensions = ['Cogs.Member', 'Cogs.Sarcasm','Cogs.Clear_Message']
+extensions = ['Cogs.Member', 'Cogs.Sarcasm','Cogs.Clear_Message','Cogs.Security']
 
 if __name__ == '__main__':
     for ext in extensions:
         client.load_extension(ext)
 
 
-@client.command()
-async def kick(ctx, member: discord.Member, *, reason=None):  # KICK A MEMBER
-    await member.kick(reason=reason)
-
-@client.command()
-async def ban(ctx, member: discord.Member, *, reason=None):  # BAN A MEMBER FROM SERVER
-    await member.ban(reason=reason)
-    await ctx.command(f'Banned {member.mention}')
-
-@client.command()
-async def unban(ctx, *, member):  # UNBAN THE BANNED MEMBER
-    banned_users = await ctx.guild.bans()
-    member_name, member_discriminator = member.split('#')
-
-    for ban_entry in banned_users:
-        user = ban_entry.user
-
-        if (user.name, user.discriminator) == (member_name, member_discriminator):
-            await ctx.guild.unban(user)
-            await ctx.send(f'Unbanned {user.mention}')
-            return
-
-
-
-client.run('NzY2MDM4MzQ3MDQ2MDYwMDYy.X4dizg.u7fZn6sl1u0lDLWxKfWgaNia2nM')
+client.run('******************************************')
