@@ -1,35 +1,23 @@
 import discord
+import os
 import random
 from discord.ext import commands
 
 intents = discord.Intents(messages = True, guilds = True, reactions = True, members = True, presences = True)
 client = commands.Bot(command_prefix = '!',intents = intents)
 
+
 @client.event
-async def on_ready(): # BOT IS ONLINE
+async def on_ready():
     await client.change_presence(status=discord.Status.online, activity=discord.Game('Bamboozled'))
     print("Bot is ready")
 
-@client.event
-async def on_member_join(member):  # NOTIFY WHEN A MEMBER JOINS THE SERVER
-    print(f"{member} has joined a server.")
 
-@client.event
-async def on_member_remove(member):  # NOTIFY WHEN A MEMBER LEAVES THE SERVER
-    print(f"{member} has left a server. ")
+extensions = ['Cogs.Member', 'Cogs.Sarcasm']
 
-@client.command(aliases=['hey','HEY'])
-async def Hey(ctx, *, question):    # TALKING TO BOT via COMMANDS
-    responses = ['These are just feelings. They’ll go away.',
-                 'You can’t just give up! Is that what a dinosaur would do?',
-                 'I’m curvy and I like it.',
-                 'Joey doesn’t share food!',
-                 'I don’t like it when people take food off my plate, okay?',
-                 'Hey, how you doin ?'
-                 'What am I gonna do? Keep trying to get rid of these feelings.',
-                 'Now, let’s go, baby. It’s food time. Bring it, bitch.',
-                 'Everything’s fine, it’s just a little crush.']
-    await ctx.send(f'{random.choice(responses)}')
+if __name__ == '__main__':
+    for ext in extensions:
+        client.load_extension(ext)
 
 @client.command()
 async def clear(ctx, amount=5):   # CLEAR RECENT MESSAGES ON THE CHANNEL
@@ -59,4 +47,4 @@ async def unban(ctx, *, member):  # UNBAN THE BANNED MEMBER
 
 
 
-client.run('NzY2MDM4MzQ3MDQ2MDYwMDYy.X4dizg.AQdhFoD0aOchi5eX3scTxAAXMuc')
+client.run('NzY2MDM4MzQ3MDQ2MDYwMDYy.X4dizg.4jCGM_83kqBRNzGkMIniG3pK-hE')
