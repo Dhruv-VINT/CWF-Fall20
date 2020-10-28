@@ -2,6 +2,7 @@ import discord
 import random
 from discord.ext import commands
 
+client = discord.Client
 class Sarcasm(commands.Cog):
 
     def _init__(self, client):
@@ -19,6 +20,16 @@ class Sarcasm(commands.Cog):
                      'Now, let’s go, baby. It’s food time. Bring it, bitch.',
                      'Everything’s fine, it’s just a little crush.']
         await ctx.send(f'{random.choice(responses)}')
+
+    @commands.Cog.listener()
+    async def on_message(self, message):
+        keywords = ["sandwiches", "pizza", "food" ]
+        #channel = discord.utils.get(client.guilds[10].channels, name="general")
+        channel = message.channel
+        for keyword in keywords:
+            if keyword.lower() in message.content.lower():
+                response = f"Did someone say {keyword.lower()}? Joeyy's hungry ! "
+                await channel.send(response)
 
 def setup(client):
     client.add_cog(Sarcasm(client))
