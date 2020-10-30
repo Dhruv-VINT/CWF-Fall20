@@ -16,7 +16,7 @@ class Snack_time(commands.Cog):
             user = random.choice(online_members)
             current_time = imt(datetime.datetime.now().strftime(%I))
             channel = discord.utils.get(bot.guilds[0].channels, name = "general")
-            message = f"It's {current_time} o'clocl! Time for some food, Aren't you starving ?! <@{user}"
+            message = f"It's {current_time} o'clock! Time for some food, Aren't you starving ?! <@{user}"
             await channel.send(message)
         await asyncio.sleep(3600)
 
