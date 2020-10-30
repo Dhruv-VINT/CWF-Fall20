@@ -20,4 +20,4 @@ if __name__ == '__main__':
         client.load_extension(ext)
 
 
-client.run('**************************************************')
+client.run('NzY2MDM4MzQ3MDQ2MDYwMDYy.X4dizg.JZ4qSm14IlIMKIkwdsjuzPFd0rI')
