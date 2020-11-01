@@ -1,5 +1,5 @@
 # CWF-Fall'20
-**Project :** Joeyy - A Discord Bot written in Python.<br>
+**Project :** Joeyy - A Discord Bot written in Python. *(Will be deployed on Heroku)*<br>
 Joeyy is a Discord bot which gives sarcastic replies to a user's messages in a server. It can also play music & do general stuff to manage a server.
 
 ### Project Analogy 📝 
