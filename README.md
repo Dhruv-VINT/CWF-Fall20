@@ -38,5 +38,5 @@ Joeyy is a Discord bot which gives sarcastic replies to a user's messages in a s
 
 ### Under Development ⌨️ 
 *Work in progress !* <br>
-**Music bot** : Lavalink (Wavelink) is used to provide music playing commands. The code is somewhat finished, just the process of intigrating it with the server & the main bot.py file is left. <br>
+**Music bot** : Lavalink (Wavelink) is used to provide music playing commands. The code is somewhat finished, the process of intigrating it with the server & the main bot.py file is pending. <br>
 **Snack-time reminder** : A Timely reminder whivh remind the 'active' server members to drink water or eat something. A little bit of tweaking with it's code is still needed for the function to run seamlessly.
