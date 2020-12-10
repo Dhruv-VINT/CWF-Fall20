@@ -29,7 +29,7 @@ Joeyy is a Discord bot which gives sarcastic replies to a user's messages in a s
 - **!unban :** manually unbans the banned member.
 
 ### Terminal Insights 🔍
-1. When the Bot is **online/ready** on the server :-<br>
+1. When the Bot is **online/ready** on the Discord server :-<br>
   ![alt text](https://github.com/Dhruv-VINT/CWF-Fall20/blob/main/Images/ty.jpg?raw=true)<br>
   
 2. When a user **joins/leaves** the server :-<br>
